@@ -27,6 +27,8 @@ int main(void) {
 
     /* Antal dage */
     dage = temp1 % 7;
+
+    /* Antal uger */
     uger = temp1 / 7;
 
     printf("%d uger, %d dage, %d timer, %d minutter, %d sekunder\n", uger, dage, timer, min, sek);
