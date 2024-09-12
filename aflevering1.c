@@ -1,35 +1,27 @@
 #include <stdio.h>
 
 int main(void) {
-    int INPUT = 0,
-        sek = 0,
-        min = 0,
-        timer = 0,
-        dage = 0,
-        uger = 0,
-        temp1 = 0,
-        temp2 = 0;
+    int INPUT,
+        sek,
+        min,
+        timer,
+        dage,
+        uger;
 
     printf("Indtast et antal sekunder: ");
     scanf("%d", &INPUT);
 
-    /* Antal sekunder */
-    sek = INPUT % 60;
-    temp1 = INPUT / 60;
+    sek = INPUT % 60; // Antal sekunder
+    min = INPUT / 60; // Total antal minutter
 
-    /* Antal minutter */
-    min = temp1 % 60;
-    temp2 = temp1 / 60;
+    timer = min / 60; // Antal timer
+    min = min % 60;   // Antal resterende minutter
 
-    /* Antal timer */
-    timer = temp2 % 24;
-    temp1 = temp2 / 24;
+    dage = timer / 24; // Antal dage
+    timer = timer % 24; // Antal resterende timer
 
-    /* Antal dage */
-    dage = temp1 % 7;
-
-    /* Antal uger */
-    uger = temp1 / 7;
+    uger = dage / 7; // Antal uger
+    dage = dage % 7; // Antal resterende dage
 
     printf("%d uger, %d dage, %d timer, %d minutter, %d sekunder\n", uger, dage, timer, min, sek);
 
