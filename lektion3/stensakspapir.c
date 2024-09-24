@@ -13,6 +13,18 @@ int main(void) {
 
     printf("Skriv haand for spiller 2: ");
     scanf(" %c", &spiller2_haand);
+    
+    // Check om spiller 1s input er ugyldigt
+    if(spiller1_haand != 's' && spiller1_haand != 'r' && spiller1_haand != 'p') {
+        printf("Ugyldigt input, spiller 1");
+        return 0;
+    } 
+
+    // Check om spiller 2s input er ugyldigt
+    if(spiller2_haand != 's' && spiller2_haand != 'r' && spiller2_haand != 'p') {
+        printf("Ugyldigt input, spiller 2");
+        return 0;
+    }
 
     // Om spiller 1 har vundet
     int spiller1_vandt;
